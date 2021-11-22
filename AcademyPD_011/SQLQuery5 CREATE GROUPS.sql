@@ -1,0 +1,6 @@
+CREATE TABLE AcademyPD_011.db_owner.groups
+(
+group_id INT NOT NULL PRIMARY KEY IDENTITY,
+group_name NVARCHAR(20) NOT NULL
+);
+GO

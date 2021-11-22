@@ -1,0 +1,2 @@
+USE SQLAcademy3;
+SET IDENTITY_INSERT dbo.students ON

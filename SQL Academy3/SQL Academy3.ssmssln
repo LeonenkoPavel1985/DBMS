@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 18.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SQL Academy3", "SQL Academy3\SQL Academy3.ssmssqlproj", "{86D5F188-B7FB-4F92-9AF6-B3A3AE3473A0}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "SELECT", "SELECT\SELECT.ssmssqlproj", "{D937C004-942F-4234-B13B-3EA9A082570B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86D5F188-B7FB-4F92-9AF6-B3A3AE3473A0}.Default|Default.ActiveCfg = Default
+		{04B3FC71-AFDD-4927-AF4D-7B3633604E23}.Default|Default.ActiveCfg = Default
+		{D937C004-942F-4234-B13B-3EA9A082570B}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4867A3AE-09EC-4AAC-9727-B9489BC3C5B8}
+	EndGlobalSection
+EndGlobal

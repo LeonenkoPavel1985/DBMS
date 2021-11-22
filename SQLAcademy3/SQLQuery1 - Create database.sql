@@ -1,0 +1,2 @@
+CREATE DATABASE SQLAcademy3;
+SELECT * FROM sys.databases;

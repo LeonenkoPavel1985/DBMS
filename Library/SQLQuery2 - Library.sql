@@ -1,0 +1,77 @@
+-- Создаем базу данных 'Библиотека'.
+--CREATE DATABASE SQLLibrary;
+--SELECT * FROM sys.databases;
+
+--Создаем таблицу 'Книга'
+--USE SQLLibrary;
+--CREATE TABLE books
+--(
+--book_id INT NOT NULL PRIMARY KEY IDENTITY,
+--book_author NVARCHAR (150) NOT NULL,
+--book_title NVARCHAR (150) NOT NULL,
+--book_cover NVARCHAR (150) NOT NULL,
+--book_pages INT NOT NULL,
+--book_year INT NOT NULL CONSTRAINT year_check CHECK (book_year >= 1995 AND book_year <= 2021),
+--book_publishing_house NVARCHAR (150) NOT NULL,
+--book_place_publication NVARCHAR (150) NOT NULL,
+--book_price REAL CONSTRAINT price_check CHECK (book_price >= 1000 AND book_price <= 7500)
+--)
+--SELECT * FROM INFORMATION_SCHEMA.TABLES;
+
+-- Создаем таблицу читатели.
+--USE SQLLibrary;
+--CREATE TABLE readers
+--(
+--reader_id INT NOT NULL PRIMARY KEY IDENTITY,
+--reader_last_name NVARCHAR (100) NOT NULL,
+--reader_first_name NVARCHAR (100) NOT NULL,
+--reader_middle_name NVARCHAR (100) NOT NULL,
+--reader_birth_date DATE NOT NULL,
+--reader_address NVARCHAR (200) NOT NULL,
+--reader_telephone NVARCHAR (50) NOT NULL,
+--)
+--SELECT * FROM INFORMATION_SCHEMA.TABLES;
+
+-- Создаем таблицу выдача книг.
+--USE SQLLibrary;
+--CREATE TABLE lending_books
+--(
+--lending_books_id INT NOT NULL PRIMARY KEY IDENTITY,
+--library_card_number INT NOT NULL,
+--book_number NVARCHAR (50) NOT NULL,
+--date_issue DATE NOT NULL,
+--return_date DATE NOT NULL,
+--book INT FOREIGN KEY REFERENCES dbo.books(book_id),
+--reader INT FOREIGN KEY  REFERENCES dbo.readers(reader_id),
+--)
+--SELECT * FROM INFORMATION_SCHEMA.TABLES;
+
+-- Заполняем таблицу книги.
+--USE SQLLibrary;
+--INSERT dbo.books (book_author,book_title,book_cover,book_pages,book_year,book_publishing_house,book_place_publication,book_price)
+--VALUES (N'Пушкин', N'Собрание сочинений', N'Цветная', N'450',  N'2001',  N'Росмэн',  N'Россия', N'4500')
+--INSERT dbo.books (book_author,book_title,book_cover,book_pages,book_year,book_publishing_house,book_place_publication,book_price)
+--VALUES (N'Толстой', N'Война и мир', N'Черная', N'1500',  N'2015',  N'ЭКСМО-АСТ',  N'Россия', N'5000')
+--INSERT dbo.books (book_author,book_title,book_cover,book_pages,book_year,book_publishing_house,book_place_publication,book_price)
+--VALUES (N'Миллер', N'С# для чайников', N'Цветнаяя', N'595',  N'2019',  N'Диалектика',  N'Россия', N'1450')
+--SELECT * FROM dbo.books;
+
+-- Заполняем таблицу читатели.
+--USE SQLLibrary;
+--INSERT dbo.readers (reader_last_name,reader_first_name,reader_middle_name,reader_birth_date,reader_address,reader_telephone)
+--VALUES (N'Леоненко', N'Павел', N'Александрович', N'1985-07-09',  N'Красноярский рабочий 70-62',  N'89082092695')
+--INSERT dbo.readers (reader_last_name,reader_first_name,reader_middle_name,reader_birth_date,reader_address,reader_telephone)
+--VALUES (N'Юденков', N'Антон', N'Александрович', N'1987-10-06',  N'Щетинкина 78',  N'89135601050')
+--INSERT dbo.readers (reader_last_name,reader_first_name,reader_middle_name,reader_birth_date,reader_address,reader_telephone)
+--VALUES (N'Власов', N'Андрей', N'Олегович', N'1987-04-26',  N'Ярыгинская набережная 24-102',  N'89134523658')
+--SELECT * FROM dbo.readers;
+
+-- Заполняем таблицу выдача книг.
+--USE SQLLibrary;
+--INSERT dbo.lending_books (library_card_number,book_number,date_issue,return_date,book,reader)
+--VALUES (N'123', N'15', N'2021-09-10', N'2021-09-25',  N'1',  N'3')
+--INSERT dbo.lending_books (library_card_number,book_number,date_issue,return_date,book,reader)
+--VALUES (N'115', N'4', N'2021-09-08', N'2021-09-20',  N'2',  N'1')
+--INSERT dbo.lending_books (library_card_number,book_number,date_issue,return_date,book,reader)
+--VALUES (N'177', N'19', N'2021-09-07', N'2021-09-26',  N'3',  N'2')
+--SELECT * FROM dbo.lending_books;

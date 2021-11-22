@@ -1,0 +1,3 @@
+CREATE DATABASE AcademyPD_011;
+SELECT * FROM sys.databases;
+GO 
